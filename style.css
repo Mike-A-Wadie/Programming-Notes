@@ -1,0 +1,43 @@
+A {
+    text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+}
+
+li {
+    font-size: 18px;
+}
+
+.syntax {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.indications {
+    display: block;
+    width: 30%;
+}
+
+.nested_h2 {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    padding: 2px 6px 2px 6px;
+    margin: 24px 0 24px 0;
+}
+
+.comb_head {
+    font-size: 20px;
+}
+
+.udacity {
+    border: 5px solid #02b3e4;
+    padding: .3em;
+    margin: 24px 0 24px 0;
+    width: 14%;
+}
