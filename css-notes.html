@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>My CSS Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1 align="center">My CSS Notes</h1>
+  <hr>
+
+
+  <p><strong><a href="https://www.w3schools.com/css/css_intro.asp target=" target="_blank">CSS:</a></strong> Stands for <strong><mark>Cascading Style Sheets</mark></strong>, it's a language for describing the visual appearance of web pages, including
+    properties
+    such as their layout, colors, and fonts.</p>
+
+  <p><strong><a href="https://www.w3schools.com/whatis/whatis_htmldom.asp" target="_blank">DOM:</a></strong> Stands for <strong><mark>Document Object Model</mark></strong> it contains a tree structure for each HTML element, and for each piece of
+    text,
+    and image, and other objects inside the webpage.</p>
+
+  <h2><strong><a href="https://www.w3schools.com/css/css_syntax.ASP" target="_blank" style="color:black;">CSS Syntax:</a></strong></h2>
+  <img src="css_syntax.png" alt="CSS Syntax" class="syntax">
+  <ul>
+    <li><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector" target="_blank">Selector:</a></strong> <strong><mark>Selectors</mark></strong> are used to target the <strong><mark>HTML elements</mark></strong> on our web
+      pages
+      that we want to style. There are a wide variety of CSS selectors available, allowing for fine-grained precision when selecting elements to style.
+    </li><br>
+    <img src="css_selector.png" alt="CSS Selector"><br><br>
+
+    <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax" target="_blank">Declarations:</a></strong> Setting CSS properties to specific values is the core function of the CSS language. A property and value pair is called a
+      declaration,
+      and any CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out, and to style it.</li><br>
+    <img src="css_declaration.png" alt="CSS Declaration" class="img"><br><br>
+
+    <p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax#css_declaration_blocks" target="_blank">CSS Declaration Blocks:</a></strong> Declarations are grouped in <strong><mark>blocks</mark></strong>, that is in a structure
+      delimited
+      by an opening brace, '{' (U+007B LEFT CURLY BRACKET), and a closing one, '}' (U+007D RIGHT CURLY BRACKET). Blocks sometimes can be nested, so opening and closing braces must be matched.</p><br>
+    <img src="css_declaration_block.png" alt="CSS Declaration Blocks" class="img"><br><br>
+  </ul>
+
+  <h2>Attributes Used in HTML to Style as Selectors in CSS:</h2>
+  <h3><a href="CSS Selectors.pdf" target="_blank">Reference Sheet - CSS Selectors</a></h3>
+  <h2><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id" target="_blank" class="nested_h2">id=:</a></strong></h2>
+  <ul>
+    <li>It's used to specify a unique id for an HTML element</li>
+    <li>You cannot have more than one element with the same id in an HTML document</li>
+    <li>The syntax for id is: write a hash character (#), followed by an id name. Then, define the CSS properties within curly braces {}.<br>
+  </ul>
+  <h4>id Attribute Ex:</h4>
+  <img src="id.png" alt="id Attribut Ex"></li>
+  <br>
+
+
+  <h2><strong><a href="https://www.w3schools.com/tags/att_class.asp" target="blank" class="nested_h2">class=:</a></strong></h2> The class attribute specifies one or more classnames for an element, it's mostly used to point to a class in a style
+  sheet. However,
+  it can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class.
+  <h4>class Attribute Ex:</h4>
+  <img src="class_attribute.png" alt="Class Attribute">
+  <br>
+
+  <p><strong><mark>Note:</mark></strong> The difference between <strong><mark>id</mark></strong> attribute and <strong><mark>class</mark></strong> attribute is that id is meant to be unique there can only be one element with a particular id on the
+    page,
+    in contrast, there can be any number of elements with the same class.</p><br>
+  <img src="id_attribute_with_css_ex.png" alt="id Attribute with CSS Ex" class="indications" class="indications"><br><br>
+
+
+
+  <h2><strong><a href="https://www.w3schools.com/tags/att_style.asp" target="_blank" class="nested_h2">style=:</a></strong></h2> The style global attribute contains CSS styling declarations to be applied to the element. Note that it is recommended
+  for styles
+  to be defined in a separate file or files. This attribute and the <strong><mark>style</mark></strong> element have mainly the purpose of allowing for quick styling, for example for testing purposes.
+  <h4>style Attribut ex:</h4>
+  <ul>
+    <li>The first way is to use the style attribute to apply style directly to an HTML element.</li>
+    <li>The second way is to use the style element along with a ruleset.</li><br>
+  </ul>
+  <img src="style_attribute_ex.png" class="img">
+  <br><br>
+  <img src="style_attribute_ex2.png" class="img">
+  <br><br>
+  <img src="style_attribute_ex3.png" class="img">
+  </li><br>
+  </ul>
+
+  <h2><strong><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators" target="_blank">Combining Selectors:</a></strong></h2>
+  <p class="comb_head">There are many ways to combine selectors to each other and orignally it's called <strong><mark>Combinators</mark></strong>.</p>
+  <ul>
+    <li><strong><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators#descendant_combinator" target="_blank">Descendant Combinator:</a></strong> Typically represented by a single space ( ) character —
+      combines
+      two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc) element matching the first selector. Selectors that utilize a descendant combinator
+      are called descendant selectors.</li><br>
+    <img src="combining_selectors.png" alt="Combining Selectors"></li><br><br>
+    <img src="combining_selectors2.png" alt="combining Selectors"><br><br>
+    </li>
+  </ul>
+
+  <h2>Cascading:</h2>
+  <p>The term <strong><mark>"cascading"</mark></strong> in Cascading Style Sheets refers to the way that style properties "cascade" down the DOM tree, starting at the top. A style applied to the body element will affect the entire document. A style
+    applied
+    to a lower-level element will affect that element and all its descendants.</p>
+  <img src="Cascading.png" alt="Cascading"><br><br>
+
+  <h1><strong>Units:</strong></h1>
+  <ul>
+    <li>The mian unit in CSS to measure anything is <strong><mark>Pixels</mark></strong> and its abbreviation is <strong><mark>px</mark></strong>.</li>
+    <ul>
+      <li>1 inch = 96 pixels.</li>
+      <li>1 centimeter = 37.8 pixels.</li>
+    </ul><br>
+    <li>There is another unit of measurement within CSS which is <strong><mark>Points</mark></strong> and it's mainly used to measure text and its abbreviation is <strong><mark>pt</mark></strong>.</li>
+    <ul>
+      <li>1 inch = 72 pt</li>
+      <li>1 centimeter = 28.35 pt</li>
+    </ul>
+  </ul>
+
+  <h2><strong><a href="https://www.w3schools.com/css/css_colors.asp" target="_blank">Colors:</a></strong></h2>
+  <p>Web borwsers makes their colors by mixing three primary colors which are <strong style="color: red;">red</strong>, <strong style="color: green;">green</strong>, <strong style="color: blue;">blue</strong>.</p>
+  <img src="primary_colors.png" alt="Primary Colors"><br><br>
+  <p>We don't just mention colors by their names but also by numbers in order to find the perfect amount of the specific primary color we want in the mix and it's any where from 0 to 100% of full brightness.</p>
+  <p>For instance, if we mixed <strong>100%</strong> <strong style="color: red;">red</strong> + <strong>50%</strong> <strong style="color: green;">green</strong> it will result of a bright <strong style="color: orange;">orange</strong> color in which
+    its
+    <strong>rgb</strong> is (<strong style="color: red;">100%</strong>, <strong style="color: green;">50%</strong>, <strong style="color: blue;">0%</strong>)
+  </p>
+  <p>In web borwsers, each primary color (<strong style="color: red;">red</strong>, <strong style="color: green;">green</strong>, <strong style="color: blue;">blue</strong>) can have 256 possible values, this is beacuse each color is stored in a
+    single
+    byte which is a space in memory that can hold number from 0 to 255.</p>
+  <p>We can also write colors as a number is <strong><mark>hexadecimal</mark></strong> or <strong><mark>hex</mark></strong> base <strong>16</strong>. In hex, each digit can go from <strong><mark>zero</mark></strong> to
+    <strong><mark>nine</mark></strong> and then from <strong><mark>A</mark> to <strong><mark>F</mark></strong>.</p>
+  <p class="udacity">So for Udacity's <strong style="color: #02b3e4">blue</strong> color:</p>
+  <ul>
+    <li>#<strong style="color: red;">02</strong><strong style="color: green;">b3</strong><strong style="color: blue;">e4</strong></li>
+    <li>rgb (<strong style="color: red;">1%</strong>, <strong style="color: green;">70%</strong>, <strong style="color: blue;">89%</strong>)</li>
+    <li>rgb (<strong style="color: red;">2</strong>, <strong style="color: green;">179</strong>, <strong style="color: blue;">228</strong>)</li>
+  </ul>
+
+
+
+  <h2>CSS Declarations:</h2>
+  <h3>CSS Colors</h3>
+  <div class="color_row">
+    <div class="innerbox" id="box1">
+      <span class="aliceblue" id="aliceblue_name"><a href="https://www.w3schools.com/colors/color_tryit.asp?color=AliceBlue" target="_blank"></a>AliceBlue</span>
+      <span class="aliceblue" id=""><a href="https://www.w3schools.com/colors/color_tryit.asp?hex=F0F8FF" target="_blank">#F0F8FF</span>
+    </div>
+
+    <div class="innerbox" id="box2">
+      <span class="aliceblue"><a href="https://www.w3schools.com/colors/color_tryit.asp?color=AntiqueWhite" target="_blank">AntiqueWhite</a></span>
+      <span class="antiquewhite_hex"><a href="https://www.w3schools.com/colors/color_tryit.asp?hex=FAEBD7" target="_blank">#FAEBD7</a></span>
+    </div>
+  </div>
+
+
+
+
+
+  <input type="text" list="planets">
+
+  <datalist id="planets">
+    <option value="Racoon"></option>
+    <option value="Teaser"></option>
+    <option value="Tiger"></option>
+  </datalist>
+
+
+
+</body>
+
+</html>

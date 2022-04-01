@@ -1,0 +1,2603 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: 65%;
+      height: auto;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      padding: 8px;
+    }
+  </style>
+
+  <title>👽My HTML Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+  <hr size="3" noshade>
+  <h1 align="center">My HTML Notes</h1>
+  <br>
+  <h2 align="center">2022 Update</h2>
+  <p style="font-size:30px" align="center">💃 🕺</p>
+  <hr size="3" noshade>
+
+  <br>
+
+  <h2>Contents</h2>
+  <ul>
+    <li><a href="#http_meaning_definitions">HTTP Meaning & Definitions</a></li>
+    <li><a href="#web_addresses">Web Addresses</a></li>
+    <li><a href="#random_definitions">Random Definitions</a></li>
+    <li><a href="#tag_signs">Tag Signs</a></li>
+    <li><a href="#tags_learned">Tags Learned</a></li>
+    <li><a href="#lists">Lists</a></li>
+    <li><a href="#grouping_content">Grouping Content</a></li>
+    <li><a href="#attributes">Attributes</a></li>
+    <li><a href="#more_to_learn">More to Learn</a></li>
+    <ol>
+      <li><a href="#block_level_elements">Block-level Elements</a></li>
+      <li><a href="#inline_elements">Inline Elements</a></li>
+    </ol>
+  </ul>
+
+
+  <h2>Main references:</h2>
+  <ol>
+    <li><a href="https://www.udacity.com/" target="_blank">UDACITY</a>
+    <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a></li>
+    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools.com</a></li>
+    <li><a href="https://stackoverflow.com/" target="_blank">StackOverflow</a></li>
+    <li><a href="https://devdocs.io/" target="_blank">DevDocs</a></li>
+  </ol>
+
+  <h2>Online Code Editors</h2>
+  <ol>
+    <li><a href="https://codepen.io/">CodePen</a></li>
+  </ol>
+
+  <br>
+
+  <h2>Learned in HTML:</h2>
+
+  <p><strong>hypertext:</strong> A form of text in which documents can refer (link) to other documents and resources and it's called (hyperlinks)</p>
+
+  <p>Web pages are written in HTML, and the links among web pages and other resources are what makes the web "web-like".</p>
+
+  <p><strong>HTML:</strong> Stands for HyperText Markup Language</p><br>
+
+  <hr>
+
+  <h3><a id="http_meaning_definitions">HTTP Meaning & Definitions:</a></h3>
+
+  <p><strong><mark>HyperText Transfer Protocol</mark> (HTTP)</strong> is the underlying <a href="https://webopedia.com/TERM/P/protocol.html" target="_blank">protocol</a> used by the <a href="https://webopedia.com/TERM/W/World_Wide_Web.html"
+      target="_blank">World Wide Web</a> to define how messages are formatted and transmitted and what actions <a href="https://webopedia.com/TERM/W/Web_server.html" target="_blank">Web
+      servers</a> and browsers should take in response to various commands It is a request-response protocol in the client-server computing model. Clients and servers communicate by exchanging individual messages.
+    The message sent by the client, typically a Web browser, is the request while the message sent by the server as an answer is the response. <strong>The server will provide resources</strong> such as <a href="https://webopedia.com/TERM/H/HTML.html"
+      target="_blank">HTML</a> files,
+    which is which contain the information for formatting and displaying Web pages</p>
+
+  <p><mark>In simpler terms</mark>, when a <a href="https://webopedia.com/TERM/U/URL.html" target="_blank">URL</a> is entered into a Web browser, an <strong>HTTP command</strong> is sent to the Web server directing it to fetch and transmit the
+    requested Web page.
+    <strong><mark>HTTP is a <a href="https://webopedia.com/TERM/S/stateless.html" target="_blank">stateless</a> protocol</mark></strong>, meaning that the server is not required to retain session information or status about each user for the duration
+    of multiple requests.
+    This can become problematic for interactions with certain pages, such as using an e-commerce shopping basket. While HTTP is stateless, using HTTP <a href="https://webopedia.com/TERM/C/cookie.html" target="_blank">cookies</a> allows for stateful
+    sessions.
+  </p>
+
+  <h3><a href="https://www.webopedia.com/definitions/http/" target="_blank">HTTP RESPONSE STATUS CODES</a></h3>
+
+  <p>HTTP response status codes are issued by a server in response to a client’s request. It indicates whether a specific HTTP request has been successfully completed and helps to identify the cause
+    of the problem. Responses are divided into five classes:</p>
+
+  <ul>
+    <li><strong>Informational response (100-199): A response indicating the request was received and understood.</strong></li><br>
+    <li><strong>Successful response (200-299): A response indicating the request was received, understood, and accepted.</strong></li><br>
+    <li><strong>Redirects (300-399): A response indicating the client must take additional action to complete the request.</strong></li><br>
+    <li><strong>Client errors (400-499): The error has been caused by the client. “404: Not Found” is a common status code. This means the server could not find the requested resource. In a browser,
+        it means the URL is not recognized.</strong></li><br>
+    <li><strong>Server errors (500-599): The server has failed to fulfill the request.</strong></li>
+  </ul>
+
+  <p>The first digit indicates the class of the response. The last two digits do not mean anything in terms of classification. The status code can be found within an HTTP message, which is how data is changed
+    between a server and a client. HTTP messages are composed of textual information encoded in <a href="https://www.webopedia.com/definitions/ascii/" target="_blank">ASCII</a> and span over multiple lines. There are two types of messages: requests
+    and responses, each having its own format.</p>
+
+  <h3>HTTPS:</h3>
+
+  <p>A similar abbreviation, HTTPS stands for <strong><mark>HyperText Transfer Protocol Secure</mark></strong>. Simply put, it is the secure version of HTTP. Communications between the browser and website (client and server) are encrypted by <a
+      href="https://webopedia.com/TERM/T/TLS.html" target="_blank">Transport Layer Security</a>.
+    Before entering sensitive information such as credit card details or a password, check that the website is using HTTPS. If it is not, any data entered into the website will be sent in <a href="https://webopedia.com/TERM/P/plain_text.html"
+      target="_blank">plaintext</a>, making it susceptible to interception.</p>
+
+
+  <h3><strong>Why do web addresses usually contain <mark>http:</mark> or <mark>https:</mark> at the beginning?</strong></h3>
+
+  <ol>
+    <li>This tells the browser which rules (or protocol) to use when talking to the web server.</li>
+    <li>It is telling the web server to use a particular set of rules called HTTP.</li>
+    <li>The difference between addresses with http: and https: is whether the browser uses encryption to keep your data private (the S stands for Secure).</li>
+  </ol>
+
+  <br>
+
+  <hr>
+
+
+  <h3><a id="web_addresses">Web Addresses:</a></h3>
+  <p>It's called <mark><a href="https://webopedia.com/TERM/U/URL.html" target="_blank">URL</a></mark> or a <strong><mark>Uniform Resource Locator</mark></strong>, that means that it's an address that tells your browser how to locate a particular
+    resource, a file for instance, in a standardized way.</p>
+  <ul>
+    <li><strong>Uniform:</strong> Standardized, which means that it's consistent.</li>
+    <li><strong>Resource:</strong> A file or other data object.</li>
+    <li><strong>Locator:</strong> Address for finiding something</li>
+  </ul>
+
+  <h4>Ways to write URLs:</h4>
+  <ul>
+    <li><mark>http</mark>://www.example.com/ "This is called <strong><mark>Fully Qualified URL</mark></strong> or <strong><mark>Absolute</mark></strong>".</li>
+    <li><mark>https</mark>://www.example.com/ "This is called <strong><mark>Fully Qualified URL</mark></strong> or <strong><mark>Absolute</mark></strong>".</li>
+    <li>www.example.com/</li>
+  </ul>
+  <p>The last URL example cannot be used in HTML code because the browser thinks that your are referring to a file with that name but the first two are eligible to be used.</p>
+
+  <h4>The basic examples of URLs:</h4>
+  <ul>
+    <li><strong><mark>http</mark></strong>://en.wikipedia.org/</li>
+    <li><strong><mark>https</mark></strong>://en.wikipedia.org/</li>
+    <li><strong><mark>file</mark></strong>:///users/kelly/notes.html - google.com "It's called a <strong><mark>relative URL</mark></strong> and this is used to locate a file on your local drive"</li>
+  </ul>
+  <p>http - https - file: These are the <strong><mark>protocols</mark></strong>.</p>
+  <p>After <strong><mark>://</mark></strong> are the <strong><mark>domains names<mark></strong>, this tells the browser what server to connect to but file URLs won't have domain names
+    because there is no server to connect to, it's just the browser reading off of your own computer.</p>
+  <p>The last thing that appears in a full URL is a <strong><mark>file path</mark></strong>, the name of the directory and the file that the url is referring to, this will sometimes be empty or a single slash if you're linking to the top page or a
+    homepage of a site.</p>
+
+  <br>
+
+  <hr>
+
+
+  <h2><a id="random_definitions">Random Definitions:</a></h2>
+
+  <p><strong><a href="https://validator.w3.org/#validate_by_uri">HTML Validator:</a></strong> It's used to validate every detail in the HTML file to check for any errors which might exist and give the proper solution for it.</p>
+
+  <p><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/Syntax" target="_blank">Syntax:</a></strong> Grammar rules - <strong><mark><a href="https://developer.mozilla.org/en-US/docs/Glossary/syntax_error">(Syntax
+          error)</a></mark></strong>: error caused in writing the proper code structure.</p>
+
+  <p><strong><a
+        href="https://academia.stackexchange.com/questions/46853/what-is-the-meaning-of-formalism-in-a-scientific-paper-what-is-the-structure#:~:text=%22Formalism%22%20is%20the%20practice%20of,usually%20an%20abstract%2C%20idealized%20model.&text=Depending%20on%20the%20formalism%2C%20these,mathematical%20and%2For%20logical%20symbols"
+        target="_blank">Formalism:</a></strong> Computers are literal</p>
+
+  <p><strong>Nesting:</strong> Some bits of code can go inside other bits of code in an orderly way</p>
+
+  <p><strong>Word Processor:</strong> Microsoft Word, Adobe Acrobat and etc.</p>
+
+  <p><strong>Markup:</strong> Is a text that has a special meaning and it's a Code that tells the browser what the text on a web page should look like. It usually has these less than and greater than signs ex: <mark>strong /strong</mark></p>
+
+  <strong>Tag ex:</strong> strong /strong<br>
+  <strong>Element:</strong> strong awesome /strong
+
+  <br><br>
+
+  <hr>
+
+  <h2><a id="tag_signs">Tag Signs:</a></h2>
+
+  <strong><mark>
+      <:< /mark></strong> Less than sign.<br>
+  <strong><mark>>:</mark></strong> Greater than sign <br>
+  <strong><mark>():</mark></strong> Parenthesis - Brackets
+
+  <br><br>
+
+  <hr>
+
+  <h2><a id="tags_learned">Tags Learned:</a></h2>
+
+  <h4><strong>The Difference between Block-level Elements and Inline Elements:</strong></h4>
+
+  <ol>
+    <li>Generally, block-level elements may contain inline elements and (sometimes) other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements</li>
+    <li>By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.</li>
+  </ol><br>
+
+  <div>
+    <h3>
+      <a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype" target="_blank">
+        <snap class="tagnamecolor" style="color:red">
+          <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+          <strong>!DOCTYPE</strong>
+          <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+        </snap>
+      </a>
+    </h3>
+    <p>It tells the browser that we are intending this document to be treated as modern HTML as opposed to one of those older versions. Without the DOCTYPE tag, browsers will go into what's called quirks mode, which is trying to be more compatible
+      with older forms of HTML.</p>
+  </div>
+  <hr class="internalhr">
+
+  <div>
+    <div>
+      <h3>
+        <a href="https://www.w3schools.com/tags/tag_meta.asp" target="_blank">
+          <span class="tagnamecolor" style="color:red">
+            <span class="tagcolor" style="color:mediumblue">&lt;</span>
+            <strong>meta</strong>
+            <span class="tagcolor" style="color:mediumblue">&gt;</span>
+          </span>
+        </a>
+      </h3>
+    </div>
+    <h2>Definition and Usage</h2>
+    <p>
+      The meta tag defines metadata about an HTML document. Metadata is data (information) about data.
+      <br><br>
+      meta tags always go inside the
+      <span class="tagnamecolor" style="color:red">
+        <span class="tagcolor" style="color:mediumblue">&lt;</span>
+        head
+        <span class="tagcolor" style="color:mediumblue">&gt;</span>
+      </span>
+      element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.
+      <br><br>
+      Metadata will not be displayed on the page, but is machine parsable.
+      <br><br>
+      Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.
+    </p>
+    <br><br>
+    <img src="images/html/meta_tag.png" alt="Meta Tag Ex">
+    <br><br>
+    <img src="images/html/meta_tag_attributes.png" alt="Meta Tag Attributes">
+    <h2>More Examples</h2>
+    <div>
+      <h3>Define keywords for search engines:</h3>
+      <span class="tagnamecolor" style="color:brown;">
+        <span class="tagcolor" style="color:mediumblue;">&lt;</span>
+        meta
+        <span class="attributecolor" style="color:red;">
+          name
+          <span class="attributevaluecolor" style="color:mediumblue;">="keywords"</span>
+          content
+          <span class="attributevaluecolor" style="color:mediumblue">="HTML, CSS, JavaScript"</span>
+        </span>
+        <span class="tagcolor" style="color:mediumblue;">&gt;</span>
+      </span>
+    </div>
+    <div>
+      <h3>Define a description of your web page:</h3>
+      <span class="tagnamecolor" style="color:brown;">
+        <span class="tagcolor" style="color:mediumblue;">&lt;</span>
+        meta
+        <span class="attributecolor" style="color:red;">
+          name
+          <span class="attributevaluecolor" style="color:mediumblue">="description"</span>
+          content
+          <span class="attributevaluecolor" style="color:mediumblue;">="Free Web Tutorials for HTML and CSS"</span>
+        </span>
+        <span class="tagcolor" style="color:mediumblue">&gt;</span>
+      </span>
+    </div>
+    <div>
+      <h3>Define the author of a page:</h3>
+      <span class="tagnamecolor" style="color:brown">
+        <span class="tagcolor" style="color:mediumblue">&lt;</span>
+        meta
+        <span class="attributecolor" style="color:red">
+          name
+          <span class="attributevaluecolor" style="color:mediumblue">="author"</span>
+          content
+          <span class="attributevaluecolor" style="color:mediumblue">="Michael Ashraf"</span>
+        </span>
+        <span class="tagcolor" style="color:mediumblue">&gt;</span>
+      </span>
+    </div>
+    <div>
+      <h3>Refresh document every 30 seconds</h3>
+      <span class="tagnamecolor" style="color:brown">
+        <span class="tagcolor" style="color:mediumblue">&lt;</span>
+        meta
+        <span class="attributecolor" style="color:red">
+          http-equiv
+          <span class="attributevaluecolor" style="color:mediumblue">="refresh"</span>
+          content
+          <span class="attributevaluecolor" style="color:mediumblue">="30"</span>
+        </span>
+        <span class="tagcolor" style="color:mediumblue">&gt;</span>
+      </span>
+    </div>
+    <div>
+      <h3>Setting the viewport to make your website look good on all devices</h3>
+      <span class="tagnamecolor" style="color:brown">
+        <span class="tagcolor" style="color:mediumblue">&lt;</span>
+        meta
+        <span class="attributecolor" style="color:red">
+          name
+          <span class="attributevluecolor" style="color:mediumblue">="viewport"</span>
+          content
+          <span class="attributevluecolor" style="color:mediumblue">="width=device-width, initial-scale=1.0"</span>
+        </span>
+        <span class="tagcolor" style="color:mediumblue">&gt;</span>
+      </span>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://www.w3schools.com/tags/tag_head.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>head</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>The head element is a container for metadata (data about data) and is placed between the
+        <a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>html</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        tag and the
+        <a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>body</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        tag. Metadata is data about the HTML document, it is not displayed and typically define the document title, character set, styles, scripts, and other meta information. It contains the following tags:
+        <a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>title</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        <a href="https://www.w3schools.com/tags/tag_head.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>head</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        <a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>style</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        <a href="https://www.w3schools.com/tags/tag_base.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>base</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        <a href="https://www.w3schools.com/tags/tag_link.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>link</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        <a href="https://www.w3schools.com/tags/tag_meta.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>meta</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        <a href="https://www.w3schools.com/tags/tag_script.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>script</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        <a href="https://www.w3schools.com/tags/tag_noscript.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>nonscript</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://www.w3schools.com/tags/tag_head.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>body</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>It defines the document's body and it contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. There can
+        only be one
+        <a href="https://www.w3schools.com/tags/tag_noscript.asp" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>body</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        element in an HTML document.
+      </p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3><strong><a href="https://bit.ly/3snGmRG" target="_blank">Whitespace:</a></strong></h3>
+      <p>
+        Is what indicates to spaces, tabs and line breaks. And two of the most used elements for breaks between the lines and words are
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>br</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        and
+        <a href="https://www.computerhope.com/issues/ch001662.htm#:~:text=To%20create%20extra%20spaces%20before,following%20code%20in%20our%20HTML.&text=If%20you%20are%20using%20a,or%20editing%20the%20HTML%20code" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue"></snap>
+            & nbsp;
+            <snap class="tagcolor" style="color:mediumblue"></snap>
+          </snap>
+        </a>
+      </p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>br</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>It's called <mark><em>line break</em></mark> and it's a <strong><mark>void element - inline element</mark></strong> because it
+        doesn't have a closing tag therefore, it doesn't have any content in between.</p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>p</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>
+        Is a <strong><mark>block element</mark></strong> and it's called <mark><em>paragraph</em></mark> tag and it's a regular tag. It
+        also generates a <mark>margin</mark> around this box, to visually separate the paragraph from
+        surrounding elements.
+      </p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://devdocs.io/html/element/hr" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>hr</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>The hr HTML element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a
+        section.</p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3><a href="https://www.w3schools.com/tags/tag_comment.asp">!--...--:</a></h3>
+      <p> The comment tag is used to insert comments in the source code. Comments are not displayed in the browsers.
+        You can use comments to explain your code, which can help you when you edit the source code at a later date. This is especially useful if you have a lot of code.</p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>em</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>Is an <strong><mark>inline element</mark></strong>, it's called <em><mark>emphasis</mark></em> and it's used to italicize a
+        text.</p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>strong</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>Is an <strong><mark>inline element<mark></strong> indicates that its contents have strong <em>importance</em>,
+        <em>seriousness</em>, or <em>urgency</em>. Browsers typically render the contents in bold type
+      </p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>sub</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>sup</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>Is an <strong><mark>inline element</mark></strong>, sub and sup stand for <em><mark>"subscript" and "superscript"</mark></em>. They move text vertically, as subscript or superscript. Originally, HTML started
+        out as a tool for scientific and academic work; and these are really useful for science and math, like writing x<sub>2</sub>+3x+4 = 1 or chemical formulas like H<sub>2</sub>O.
+      </p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank">Headlines:</a></h3>
+      <p>
+        HTML has several elements for <em>headlines</em> or section headings, starting with
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>h1</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        for the largest headlines and going down to
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>h6</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+        for the smallest.
+      </p>
+      <p>
+        <snap class="tagnamecolor" style="color:red">
+          <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+          <strong>h1</strong>
+          <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+        </snap>
+        is used for the main heading on a page, while the rest are used for sub-headings.
+      </p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>a</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>Stands for <strong><mark>Anchor</mark></strong> because an
+        <snap class="tagnamecolor" style="color:red">
+          <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+          a
+          <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+        </snap>
+        element anchors an address to a piece of text on the page and it's commonly used with <strong><mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/href" target="_blank">href=</a></mark></strong> attribute to build up a
+        hyperlink.
+      </p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <h3>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>img</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+      </h3>
+      <p>Stands for <strong><mark>Image</mark></strong> and from what it's called, it's used to link images to the HTML file and it's
+        commonly used with <strong><mark><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source" target="_blank">src=</a></mark></strong> attribute.</p>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <div>
+        <h3>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption" target="_blank">
+            <span class="tagnamecolor" style="color:red">
+              <span class="tagcolor" style="color:mediumblue">&lt;</span>
+              <strong>table</strong>
+              <span class="tagcolor" style="color:mediumblue">&gt;</span>
+            </span>
+          </a>
+        </h3>
+      </div>
+      <p>
+        The
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">
+          <span class="tagnamecolor" style="color:red">
+            <span class="tagcolor" style="color:mediumblue">&lt;</span>
+            <strong>table</strong>
+            <span class="tagcolor" style="color:mediumblue">&gt;</span>
+        </a>
+        </span>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">HTML</a> element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing
+        data.
+      </p>
+      <h3>Elements Meaning:</h3>
+      <ul>
+        <li>
+          <span class="tagnamecolor" style="color:red">
+            <span class="tagcolor" style="color:mediumblue">&lt</span>
+            tr
+            <span class="tagcolor" style="color:mediumblue">&gt</span>
+          </span>
+          Table row.
+        </li>
+        <li>
+          <span class="tagnamecolor" style="color:red">
+            <span class="tagcolor" style="color:mediumblue">&lt</span>
+            td
+            <span class="tagcolor" style="color:mediumblue">&gt</span>
+          </span>
+          Table data.
+        </li>
+        <li>
+          <span class="tagnamecolor" style="color:red">
+            <span class="tagcolor" style="color:mediumblue">&lt</span>
+            th
+            <span class="tagcolor" style="color:mediumblue">&gt</span>
+          </span>
+          Table head.
+        </li>
+      </ul>
+      <h2>Examples</h2>
+      <table>
+        <tr>
+          <td>
+            <div>
+              <span class="tagnamecolor" style="color:red">
+                <span class="tagcolor" style="color:mediumblue">&lt</span>
+                table
+                <span class="tagncolor" style="color:mediumblue">&gt</span>
+              </span>
+            </div>
+            <div>
+              &nbsp;<span class="tagnamecolor" style="color:red">
+                <span class="tagcolor" style="color:mediumblue">&lt</span>
+                tr
+                <span class="tagncolor" style="color:mediumblue">&gt</span>
+              </span>
+            </div>
+            <div>
+              <div>
+                &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  td
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+                <span class="contentcolor" style="color:black">Michael</span>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  /td
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  td
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+                <span class="contentcolor" style="color:black">Ashraf</span>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  /td
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /tr
+                  <span class="tagncolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  tr
+                  <span class="tagncolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                <div>
+                  &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt</span>
+                    td
+                    <span class="tagcolor" style="color:mediumblue">&gt</span>
+                  </span>
+                  <span class="contentcolor" style="color:black">Michael</span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt</span>
+                    /td
+                    <span class="tagcolor" style="color:mediumblue">&gt</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt</span>
+                    td
+                    <span class="tagcolor" style="color:mediumblue"></span>
+                  </span>
+                  <span class="contentcolor" style="color:black">Ashraf</span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt</span>
+                    /td
+                    <span class="tagcolor" style="color:mediumblue">&gt</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt</span>
+                    /tr
+                    <span class="tagncolor" style="color:mediumblue">&gt</span>
+                  </span>
+                </div>
+                <div>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt</span>
+                    /table
+                    <span class="tagncolor" style="color:mediumblue">&gt</span>
+                  </span>
+                </div>
+          </td>
+          <td>
+            <div>
+              <h4>Code Run:</h4>
+              <table>
+                <tr>
+                  <td>Michael</td>
+                  <td>Ashraf</td>
+                </tr>
+                <tr>
+                  <td>Michael</td>
+                  <td>Ashraf</td>
+                </tr>
+              </table>
+            </div><br>
+          </td>
+        </tr>
+      </table><br>
+
+
+      <table>
+        <tr>
+          <td>
+            <div>
+              <div>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  table
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  thead
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  tr
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;&nbsp<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  th
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+                <span class="contentcolor" style="color:black">Header Conent 1</span>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /th
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;&nbsp<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  th
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+                <span class="contentcolor" style="color:black">Header Conent 2</span>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /th
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /tr
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /thead
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  tbody
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  tr
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;&nbsp<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  td
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+                <span class="contentcolor" style="color:black">Body Conent 1</span>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /td
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;&nbsp<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  td
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+                <span class="contentcolor" style="color:black">Body Conent 2</span>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /td
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /tr
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /tbody
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  tfoot
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  tr
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;&nbsp<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  td
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+                <span class="contentcolor" style="color:black">Footer Conent 1</span>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /td
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;&nbsp<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  td
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+                <span class="contentcolor" style="color:black">Footer Conent 2</span>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /td
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;&nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /tr
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                &nbsp;<span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /tfoot
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+              <div>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt</span>
+                  /table
+                  <span class="tagcolor" style="color:mediumblue">&gt</span>
+                </span>
+              </div>
+          </td>
+          <td>
+            <div>
+              <h4>Code Run:</h4>
+              <h5>Table with thead, tfoot and tbody, col and colgroup</h5>
+              <table>
+                <colgroup>
+                  <col span="1" style="background-color:#b1fc9e">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Header Content 1</th>
+                    <th>Header Content 2</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Body Content 1</td>
+                    <td>Body Content 2</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Footer Content 1</td>
+                    <td>Footer Content 2</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table><br>
+    </div>
+    <hr class="internalhr">
+
+    <div>
+      <div>
+        <h3>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">
+            <span class="tagnamecolor" style="color:red">
+              <span class="tagcolor" style="color:mediumblue">&lt;</span>
+              form
+              <span class="tagcolor" style="color:mediumblue">&gt;</span>
+            </span>
+          </a>
+        </h3>
+      </div>
+      <div>
+        <p>The
+          <span class="tagnamecolor" style="color:red">
+            <span class="tagcolor" style="color:mediumblue">&lt;</span>
+            form
+            <span class="tagcolor" style="color:mediumblue">&gt;</span>
+          </span>
+          HTML element represents a document section containing interactive controls for submitting information.
+        </p>
+        <p>
+          When we use the form tag, we mainly need to use two main elments which are
+          <span class="tagnamecolor" style="color:red">
+            <span class="tagcolor" style="color:mediumblue">&lt;</span>
+            label
+            <span class="tagcolor" style="color:mediumblue">&gt;</span>
+          </span>
+          and
+          <span class="tagnamecolor" style="color:red">
+            <span class="tagcolor" style="color:mediumblue">&lt;</span>
+            input
+            <span class="tagcolor" style="color:mediumblue">&gt;</span>
+          </span>
+          to present what's inside the form (The Content).
+        </p>
+      </div>
+      <div>
+        <h2>Different input types:</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Basic Examples</th>
+              <th>Code Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/button">button</a></td>
+              <td>A push button with no default behavior displaying the value of the value attribute, empty by default.</td>
+              <td align="center"><input type="button" name="" value="Button"></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="button"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">="button"</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/checkbox">checkbox</a></td>
+              <td>A check box allowing single values to be selected/deselected.</td>
+              <td align="center"><input type="checkbox" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="checkbox"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/color">color</a></td>
+              <td>A control for specifying a color; opening a color picker when active in supporting browsers.</td>
+              <td align="center"><input type="color" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="color"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/date">date</a></td>
+              <td>A control for entering a date (year, month, and day, with no time). Opens a date picker or numeric wheels for year, month, day when active in supporting browsers.</td>
+              <td align="center"><input type="date" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="date"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/datetime-local">datetime-local</a></td>
+              <td>A control for entering a date and time, with no time zone. Opens a date picker or numeric wheels for date- and time-components when active in supporting browsers.</td>
+              <td align="center"><input type="datetime-local" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="datetime-local"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/email">email</a></td>
+              <td>A field for editing an email address. Looks like a text input, but has validation parameters and relevant keyboard in supporting browsers and devices with dynamic keyboards.</td>
+              <td align="center"><input type="email" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="email"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/file">file</a></td>
+              <td>A control that lets the user select a file. Use the accept attribute to define the types of files that the control can select.</td>
+              <td align="center"><input type="file" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="file"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/hidden">hidden</a></td>
+              <td>A control that is not displayed but whose value is submitted to the server. There is an example in the next column, but it's hidden!</td>
+              <td align="center"><input type="hidden" name="" value="My name is Michael!"></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="hidden"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">="My name is Michael!"</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/image">image</a></td>
+              <td>A graphical submit button. Displays an image defined by the src attribute. The alt attribute displays if the image src is missing.</td>
+              <td align="center"><input type="image" name="" value="image input"></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="image"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">="image input"</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/month">month</a></td>
+              <td>A control for entering a month and year, with no time zone.</td>
+              <td align="center"><input type="month" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="month"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/number">number</a></td>
+              <td>A control for entering a number. Displays a spinner and adds default validation when supported. Displays a numeric keypad in some devices with dynamic keypads.</td>
+              <td align="center"><input type="number" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="number"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/password">password</a></td>
+              <td>A single-line text field whose value is obscured. Will alert user if site is not secure.</td>
+              <td align="center"><input type="password" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="password"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/radio">radio</a></td>
+              <td>A radio button, allowing a single value to be selected out of multiple choices with the same name value.</td>
+              <td align="center"><input type="radio" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="radio"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/range">range</a></td>
+              <td>A control for entering a number whose exact value is not important. Displays as a range widget defaulting to the middle value. Used in conjunction min and max to define the range of acceptable values.</td>
+              <td align="center"><input type="range" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="range"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/reset">reset</a></td>
+              <td>A button that resets the contents of the form to default values. Not recommended.</td>
+              <td align="center"><input type="reset" name="" value="Reset"></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="reset"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">="Reset"</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/search">search</a></td>
+              <td>A single-line text field for entering search strings. Line-breaks are automatically removed from the input value. May include a delete icon in supporting browsers that can be used to clear the field. Displays a search icon instead
+                of enter key on some devices with dynamic keypads.</td>
+              <td align="center"><input type="search" name="" value="Search"></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="search"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">="Search"</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/submit">submit</a></td>
+              <td>A button that submits the form.</td>
+              <td align="center"><input type="submit" name="" value="Submit"></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="submit"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">="Submit"</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/tel">tel</a></td>
+              <td>A control for entering a telephone number. Displays a telephone keypad in some devices with dynamic keypads.</td>
+              <td align="center"><input type="tel" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="tel"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/tel">text</a></td>
+              <td>The default value. A single-line text field. Line-breaks are automatically removed from the input value.</td>
+              <td align="center"><input type="text" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="text"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/time">time</a></td>
+              <td>A control for entering a time value with no time zone.</td>
+              <td align="center"><input type="time" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="time"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/time">url</a></td>
+              <td>A field for entering a URL. Looks like a text input, but has validation parameters and relevant keyboard in supporting browsers and devices with dynamic keyboards.</td>
+              <td align="center"><input type="url" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="url"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="https://devdocs.io/html/element/input/time">url</a></td>
+              <td>A control for entering a date consisting of a week-year number and a week number with no time zone.</td>
+              <td align="center"><input type="week" name="" value=""></td>
+              <td>
+                <span class="tagnamecolor" style="color:red">
+                  <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                  input
+                  <span class="attributecolor" style="color:red">
+                    type
+                    <span class="attributevaluecolor" style="color:mediumblue">="week"</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    name
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="attributecolor" style="color:red">
+                    value
+                    <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                  </span>
+                  <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h2>Examples</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <form action="mailto:michael.ashraf1993@gmail.com" method="post" enctype="text/plain">
+                  <label>
+                    <h2>Sign Up</h2>
+                  </label><br>
+                  <label>First Name</label><br>
+                  <input type="text" name="First Name" value=""><br><br>
+                  <label>Last Name</label><br>
+                  <input type="text" name="Last Name" value=""><br><br>
+                  <label>Email</label><br>
+                  <input type="email" name="Email" value=""><br><br>
+                  <label>Password</label><br>
+                  <input type="password" name="Password" value=""><br><br>
+                  <label>Confirm Password</label><br>
+                  <input type="password" name="Confirm Password" value=""><br><br>
+                  <input type="checkbox" name="Newsletters" value="">
+                  <label>Get newsletters about new offers.</label><br>
+                  <input type="checkbox" name="Terms and Conditions" value="">
+                  <label>Accept <a href="htmlformexample/terms-and-conditions-for-ex.html">terms and conditions.</a></label><br><br>
+                  <label>Send us a message:</label><br>
+                  <textarea name="Message" rows="8" cols="30"></textarea><br><br>
+                  <input type="submit" name="" value="Submit"><br><br>
+                  <label>Do you already have an account? <a href="htmlformexample/sign-in-form-ex.html"> Sign in!</a></label>
+                </form>
+              </td>
+              <td>
+                <div>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    form
+                    <span class="attributecolor" style="color:red">
+                      action
+                      <span class="attriburtevaluecolor" style="color:mediumblue">="mailto:michael.ashraf1993@gmail.com"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      method
+                      <span class="attributevaluecolor" style="color:mediumblue">="post"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      enctype
+                      <span class="attributevaluecolor" style="color:mediumblue">="text/plain"</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    h2
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Sign Up
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /h2
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  First Name
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    input
+                    <span class="attributecolor" style="color:red">
+                      type
+                      <span class="attributevaluecolor" style="color:mediumblue">="text"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      name
+                      <span class="attributevaluecolor" style="color:mediumblue">="First Name"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Last Name
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    input
+                    <span class="attributecolor" style="color:red">
+                      type
+                      <span class="attributevaluecolor" style="color:mediumblue">="text"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      name
+                      <span class="attributevaluecolor" style="color:mediumblue">="Last Name"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Email
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    input
+                    <span class="attributecolor" style="color:red">
+                      type
+                      <span class="attributevaluecolor" style="color:mediumblue">="email"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      name
+                      <span class="attributevaluecolor" style="color:mediumblue">="Email"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Password
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    input
+                    <span class="attributecolor" style="color:red">
+                      type
+                      <span class="attributevaluecolor" style="color:mediumblue">="password"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      name
+                      <span class="attributevaluecolor" style="color:mediumblue">="Password"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Confirm Password
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    input
+                    <span class="attributecolor" style="color:red">
+                      type
+                      <span class="attributevaluecolor" style="color:mediumblue">="password"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      name
+                      <span class="attributevaluecolor" style="color:mediumblue">="Confirm Password"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    input
+                    <span class="attributecolor" style="color:red">
+                      type
+                      <span class="attributevaluecolor" style="color:mediumblue">="checkbox"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      name
+                      <span class="attributevaluecolor" style="color:mediumblue">="Newsletters"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Get newsletters about new offers
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    input
+                    <span class="attributecolor" style="color:red">
+                      type
+                      <span class="attributevaluecolor" style="color:mediumblue">="checkbox"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      name
+                      <span class="attributevaluecolor" style="color:mediumblue">="Terms and Conditions"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Accept
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    a
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">="htmlformexample/sign-in-form-ex.html"</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  terms and conditions?
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /a
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Send us a message:
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    textarea
+                    <span class="attributecolor" style="color:red">
+                      name
+                      <span class="attributevaluecolor" style="color:mediumblue">="Message"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      rows
+                      <span class="attributevaluecolor" style="color:mediumblue">="8"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      cols
+                      <span class="attributevaluecolor" style="color:mediumblue">="30"</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    input
+                    <span class="attributecolor" style="color:red">
+                      type
+                      <span class="attributevaluecolor" style="color:mediumblue">="submit"</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      name
+                      <span class="attributevaluecolor" style="color:mediumblue">=""</span>
+                    </span>
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">="Submit"</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    br
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  &nbsp;<span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Do you already have an account?
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    a
+                    <span class="attributecolor" style="color:red">
+                      value
+                      <span class="attributevaluecolor" style="color:mediumblue">="htmlformexample/terms-and-conditions-form-ex.html"</span>
+                    </span>
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  Sign in!
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /a
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /label
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+                <div>
+                  <span class="tagnamecolor" style="color:red">
+                    <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                    /form
+                    <span class="tagcolor" style="color:mediumblue">&gt;</span>
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+    <br>
+
+    <hr>
+
+    <div>
+      <h2><a id="lists">Lists:</a></h2>
+     <div>
+       <h4>
+         Each list item starts with the
+         <a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">
+           <snap class="tagnamecolor" style="color:red">
+             <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+             <strong>li</strong>
+             <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+           </snap>
+         </a>
+         tag which refers to <strong><mark>Lists</mark></strong>.
+       </h4>
+       <h3>
+         <a href="https://www.w3schools.com/tags/tag_head.asp" target="_blank">
+           <snap class="tagnamecolor" style="color:red">
+             <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+             <strong>ol</strong>
+             <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+           </snap>
+         </a>
+       </h3>
+       <p>It's called <strong><mark>ordered list</mark></strong> and it contains a <mark>list of number</mark> or <mark>letters</mark>.</p>
+     </div>
+     <div>
+       <h3>
+         <a href="https://www.w3schools.com/tags/tag_head.asp" target="_blank">
+           <snap class="tagnamecolor" style="color:red">
+             <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+             <strong>ul</strong>
+             <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+           </snap>
+         </a>
+       </h3>
+       <p>t's called <strong><mark>unordered list</mark></strong> and it contains a list of <mark>Bullet Points</mark> or
+         <mark>dots</mark>.</p>
+     </div>
+     <p>
+       <strong><mark>Note:</mark></strong> Pay attention to the fact that the closing tag is optional for
+       <a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">
+         <snap class="tagnamecolor" style="color:red">
+           <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+           <strong>li</strong>
+           <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+         </snap>
+       </a>
+       but not optional for
+         <snap class="tagnamecolor" style="color:red">
+           <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+           <strong>ol</strong>
+           <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+         </snap>
+       and
+       <snap class="tagnamecolor" style="color:red">
+         <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+         <strong>ul</strong>
+         <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+       </snap>
+       In other words, a closing tag is optional for each <strong>list item</strong>, but not for the list as a whole. We must be sure to close the list as a whole! <strong>Why?</strong> Because
+       if we leave off the closing
+       <snap class="tagnamecolor" style="color:red">
+         <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+         <strong>ol</strong>
+         <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+       </snap>
+     or
+     <snap class="tagnamecolor" style="color:red">
+       <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+       <strong>ul</strong>
+       <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+     </snap>
+     then the browser will not know when our list ends! It will simply treat everything that comes after that point as part of the list.
+     </p>
+   </div><hr>
+
+
+    <div>
+      <h2><a id="grouping_content">Grouping Content:</a></h2>
+      <div>
+        <h3>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>div</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+       </h3>
+        <p>Is a <mark><strong>generic</strong></mark> container - <mark>It's a <strong>block level</strong> element</mark>, which
+          means that it takes up it's own line just like a paragraph does as everything after a paragraph is pushed down to a new line.
+        </p>
+      </div>
+      <div>
+        <h3>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span" target="_blank">
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>span</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+        </a>
+       </h3>
+        <p><mark>Is an <strong>inline</strong> container</mark> - <mark>It's for <strong>goruping inline content</strong></mark>:
+          That means that it groups the inline text without setting the grouped text in a seperate line on the contrary with
+          <snap class="tagnamecolor" style="color:red">
+            <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+            <strong>div</strong>
+            <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+          </snap>
+          .
+        </p>
+      </div>
+    </div><hr>
+
+    <div>
+      <h2><a id="attributes"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes" target="_blank">Attributes:</a></a></h2>
+      <div>
+        <p><strong>Key Value Pair:</strong> It means a property and a corresponding value.</p>
+        <ul>
+          <li><strong>Property Ex:</strong>
+           <span class="tagnamecolor" style="color:red">
+             <span class="tagcolor" style="color:mediumblue">&lt;</span>
+             a
+             <span class="attributecolor" style="red">
+               href
+               <span class="attributevaluecolor" style="color:mediumblue">="https://www.google.com/"</span>
+             </span>
+             <span class="tagcolor" style="color:mediumblue">&gt</span>
+           </span>
+           Click me to go to Google
+           <snap class="tagnamecolor" style="color:red">
+             <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+             /a
+             <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+           </snap>
+          </li>
+          <li><strong>Corressponding Value Ex:</strong>
+            <span class="tagnamecolor" style="color:red">
+              <span class="tagcolor" style="color:mediumblue">&lt;</span>
+              img
+              <span class="attributecolor" style="red">
+                src
+                <span class="attributevaluecolor" style="color:mediumblue">="corgi.png"</span>
+              </span>
+              <span class="tagcolor" style="color:mediumblue">&gt</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3><strong>Attributes Learned:</strong></h3>
+        <ul>
+          <li>
+            <strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/href" target="_blank">href=:</a></strong> Stands for <strong><mark>hypertext reference</mark></strong><strong> ex:</strong>
+
+            <strong>Elements compatible:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">a</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank">area</a>, <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base" target="_blank">base</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link" target="_blank">link</a>.
+          </li>
+          <ul>
+            <li>
+              <span class="tagnamecolor" style="color:red">
+                <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                a
+                <span class="attributecolor" style="red">
+                  href
+                  <span class="attributevaluecolor" style="color:mediumblue">="https://www.google.com/"</span>
+                </span>
+                <span class="tagcolor" style="color:mediumblue">&gt</span>
+              </span>
+              Click me to go to Google
+              <snap class="tagnamecolor" style="color:red">
+                <snap class="tagcolor" style="color:mediumblue">&lt;</snap>
+                /a
+                <snap class="tagcolor" style="color:mediumblue">&gt;</snap>
+              </snap>
+            </li>
+          </ul><br>
+
+        <li>
+          <strong><a href="https://www.w3schools.com/tags/att_input_src.asp#:~:text=The%20src%20attribute%20specifies%20the,type%3D%22image%22%3E%20" target="_blank">src=:</a></strong> Stands for <strong><mark>Source</mark></strong> ex:
+          <ul>
+            <li>
+              <span class="tagnamecolor" style="color:red">
+                <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                img
+                <span class="attributecolor" style="red">
+                  src
+                  <span class="attributevaluecolor" style="color:mediumblue">="logo.png"</span>
+                </span>
+                <span class="tagcolor" style="color:mediumblue">&gt</span>
+              </span>
+            </li>
+            <li>
+              <span class="tagnamecolor" style="color:red">
+                <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                img
+                <span class="attributecolor" style="red">
+                  src
+                  <span class="attributevaluecolor" style="color:mediumblue">="https://placebear.com/800/600"</span>
+                </span>
+                <span class="attributecolor" style="color:red">
+                  alt
+                  <span class="attributevaluecolor" style="color:mediumblue">="bear"</span>
+                </span>
+                <span class="tagcolor" style="color:mediumblue">&gt</span>
+              </span>
+            </li>
+          </ul><br>
+          <strong>Elements compatible:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">audio</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed" target="_blank">embed</a>,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">iframe</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">img, <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">input</a>,
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" target="_blank">script</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source" target="_blank">source</a>, <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track" target="_blank">track</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" target="_blank">video</a>.
+        </li><br>
+
+        <li>
+          <strong><a href="https://www.w3schools.com/tags/att_area_alt.asp#:~:text=The%20alt%20attribute%20specifies%20an,user%20uses%20a%20screen%20reader" target="_blank">alt=:</a></strong> Stands for area provides alternative information for an
+          image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader) ex:
+          <ul>
+            <li>
+              <span class="tagnamecolor" style="color:red">
+                <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                img
+                <span class="attributecolor" style="red">
+                  src
+                  <span class="attributevaluecolor" style="color:mediumblue">="zeka.png"</span>
+                </span>
+                <span class="attributecolor" style="color:red">
+                  alt
+                  <span class="attributevaluecolor" style="color:mediumblue">="A picture of my pet octopus, Zeke."</span>
+                </span>
+                <span class="tagcolor" style="color:mediumblue">&gt</span>
+              </span>
+            </li>
+            <li>
+              <span class="tagnamecolor" style="color:red">
+                <span class="tagcolor" style="color:mediumblue">&lt;</span>
+                img
+                <span class="attributecolor" style="red">
+                  src
+                  <span class="attributevaluecolor" style="color:mediumblue">="https://placebear.com/200/300"</span>
+                </span>
+                <span class="attributecolor" style="color:red">
+                  alt
+                  <span class="attributevaluecolor" style="color:mediumblue">="Two bears standing on two rocks"</span>
+                </span>
+                <span class="tagcolor" style="color:mediumblue">&gt</span>
+              </span>
+            </li>
+          </ul><br>
+          <strong>Elements Compatible:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/applet" target="_blank">applet</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area" target="_blank">area</a>,
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img" target="_blank">img</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank">input</a>.
+        </li><br>
+      </div>
+
+        <li>
+          <strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id" target="_blank">id=:</a></strong>
+          <ul>
+            <li>It's used to specify a unique id for an HTML element</li>
+            <li>You cannot have more than one element with the same id in an HTML document</li>
+            <li>The syntax for id is: write a hash character (#), followed by an id name. Then, define the CSS properties within curly braces {}.<br>
+          </ul>
+          <div>
+            <h4>id Attribute Ex:</h4>
+            <span class="tagnamecolor" style="color:red">
+              <span class="tagcolor" style="color:mediumblue">&lt;</span>
+              a
+              <span class="attributecolor" style="red">
+                href
+                <span class="attributevaluecolor" style="color:mediumblue">="https://www.w3shcools.com"</span>
+              </span>
+              <span class="attributecolor" style="color:red">
+                target
+                <span class="attributevaluecolor" style="color:mediumblue">="_blank"</span>
+              </span>
+              <span class="tagcolor" style="color:mediumblue">&gt</span>
+            </span>
+          </div>
+        </li><br>
+
+        <li>
+          <strong><a href="https://www.w3schools.com/tags/att_class.asp">class=:</a></strong> The class attribute specifies one or more classnames for an element, it's mostly used to point to a class in a style sheet. However, it can also be used by
+          a
+          JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class.
+          <h4>class Attribute Ex:</h4>
+          <img src="images/html/class_attribute.png" alt="Class Attribute">
+        </li><br>
+
+        <p><strong><mark>Note:</mark></Note:></strong></p> The difference between <strong><mark>id</mark></strong> attribute and <strong><mark>class</mark></strong> attribute is that id is meant to be unique there can only be one element with a
+        particular id on the page, in contrast, there can be any number of elements with the same class.</p><br>
+        <img src="images/html/id_attribute_with_css_ex.png" alt="id Attribute with CSS Ex" class="indications"><br><br>
+
+
+        <li>
+          <strong><a href="https://www.w3schools.com/tags/att_style.asp" target="_blank">style=:</a></strong> The style global attribute contains CSS styling declarations to be applied to the element. Note that it is recommended for styles to be
+          defined
+          in a separate file or files. This attribute and the <strong><mark>style</mark></strong> element have mainly the purpose of allowing for quick styling, for example for testing purposes.
+          <h4>style Attribute ex:</h4>
+          <ul>
+            <li>The first way is to use the style attribute to apply style directly to an HTML element.</li>
+            <li>The second way is to use the style element along with a ruleset.</li><br>
+          </ul>
+          <img src="images/html/style_attribute_ex.png">
+          <br><br>
+          <img src="images/html/style_attribute_ex2.png">
+          <br><br>
+          <img src="images/html/style_attribute_ex3.png">
+        </li><br>
+
+        <li>
+          <strong><a href="https://www.w3schools.com/tags/att_form_target.asp#:~:text=Definition%20and%20Usage,window%2C%20or%20inline%20frame" target="_blank">target=:</a></strong>
+          <ul>
+            <li>The target attribute specifies a name or a keyword that indicates where to display the response that is received after submitting the form.</li>
+            <li>The target attribute defines a name of, or keyword for, a browsing context (e.g. tab, window, or inline frame).</li>
+          </ul>
+          <h4>target Attribute Ex:</h4>
+          <img src="images/html/target_attribute_ex.png" alt="target attribut ex">
+          <h4>target Attribute Values:</h4>
+          <img src="images/html/target_attribute_values.png" alt="target attribute values">
+        </li>
+
+      </ul>
+    </div>
+
+
+    <br>
+
+    <hr>
+
+
+    <p><mark><strong>Note:</strong></mark> Any text editor that uses plain text should work. Code editors use plain text and have extra features to make your life easier (such as syntax highlighting). But stay away from word processors for HTML and
+      programming
+      — these add extra data that can break your code!<br> A code editor, like <strong>Atom</strong> or <strong>VS code</strong> or a <strong>Text Editor <em>like</em> notepad</strong> that uses only <mark><strong>plain text</strong></mark>, will
+      work
+      for writing codes.</p>
+    <br>
+
+    <hr>
+
+
+
+    <h1><a id="more_to_learn">What we need to learn:</a></h1>
+
+
+    <h3><a id="block_level_elements"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements" target="_blank">Block-level Elements:</a></a></h3>
+
+    <p>Block elements are used for large sections of text, such as paragraphs, headlines, or lists; and also for some other features such as video players and tables.</p>
+
+    <p>A block element creates a (usually invisible) box in the browser display. By default, this box takes up the full width of the display. The beginning of a block always starts on a new line in the display.</p>
+
+    <p>Most block elements have a particular way they are displayed by default: paragraphs have margins around them; lists have bullet-points or numbered items; headlines are printed in large text. There is also a generic block element, div, which
+      has
+      no special defaults.</p>
+
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address"><strong>address:</strong></a> Contact information.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article"><strong>article:</strong></a> Article content.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside"><strong>aside:</strong></a> Aside content.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"><strong>blockquote:</strong></a> Long ("block") quotation.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details"><strong>details:</strong></a> Disclosure widget.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"><strong>dialog:</strong></a> Dialog box.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dd"><strong>add:</strong></a> Describe a term in a description list.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div"><strong>div:</strong></a> Document division.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl"><strong>dl:</strong></a> Description list.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt"><strong>dt:</strong></a> Description list term.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset"><strong>fieldset:</strong></a> Field set label.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption"><strong>figcaption:</strong></a> Figure caption.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure"><strong>figure:</strong></a> Groups media content with a caption (see figcaption).</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer"><strong>footer:</strong></a> Section or page footer.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form"><strong>form:</strong></a> Input form.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1"><strong>h1</strong></a>, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h2">h2</a></strong>, <strong><a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h3">h3</a></strong>,
+        <strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h4">h4</a></strong>, <strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h5">h5</a></strong>, <strong><a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h6">h6</a></strong>:
+        Heading levels 1-6.
+      </li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"><strong>header:</strong></a> Section or page header.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup"><strong>hgroup:</strong></a> Groups header information.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr"><strong>hr:</strong></a> Horizontal role (dividing line).</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li"><strong>li:</strong></a> List items.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main"><strong>main:</strong></a> Contains the central content unique to this document.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"><strong>nav:</strong></a> Contains navigation links.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol"><strong>ol:</strong></a> Ordered List.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"><strong>p:</strong></a> Paragraph.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"><strong>pre:</strong></a> Preformatted text.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section"><strong>section:</strong></a> Section of a web page.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"><strong>table:</strong></a> Table.</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul"><strong>ul:</strong></a> Unordered list.</li>
+
+    </ul>
+
+    <h3><a id="inline_elements"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements#Elements">Inline Elements:</a></a></h3>
+
+
+    <p>Inline elements do not create a full-width box on the display. They modify the display of text, or insert other things into the text — such as line breaks, images, or hyperlinks.</p>
+
+    <ul>
+
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"><strong>a</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr"><strong>abbr</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym"><strong>acronym</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio"><strong>audio</strong></a> <strong>(if it has visible controls)</strong></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b"><strong>b</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi"><strong>bbi</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo"><strong>bdo</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/big"><strong>big</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br"><strong>br</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"><strong>button</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas"><strong>canvas</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite"><strong>cite</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"><strong>code</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data"><strong>data</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist"><strong>datalist</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del"><strong>del</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn"><strong>dfn</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"><strong>em</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed"><strong>embed</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i"><strong>i</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><strong>iframe</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img"><strong>img</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"><strong>input</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins"><strong>ins</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd"><strong>kbd</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label"><strong>label</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map"><strong>map</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark"><strong>mark</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter"><strong>meter</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><strong>noscript</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object"><strong>object</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output"><strong>output</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"><strong>picture</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress"><strong>progress</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"><strong>q</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby"><strong>ruby</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s"><strong>s</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp"><strong>samp</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"><strong>script</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select"><strong>select</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot"><strong>slot</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small"><strong>small</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"><strong>span</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"><strong>strong</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub"><strong>sub</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup"><strong>sup</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/svg"><strong>svg</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template"><strong>template</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea"><strong>textarea</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"><strong>time</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u"><strong>u</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tt"><strong>tt</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var"><strong>var</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"><strong>video</strong></a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr"><strong>wbr</strong></a></li>
+
+    </ul>
+
+</body>
+
+</html>
